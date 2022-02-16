@@ -1,6 +1,6 @@
 FROM ubuntu:21.04
 RUN echo "deb http://old-releases.ubuntu.com/ubuntu zesty main" | sudo tee /etc/apt/sources.list.d/zesty.list \
-    &&      sudo apt-add-repository -r universe  && aptxget update \
+    && apt-add-repository -r universe  && aptxget update \
 && apt-get install  --no-install-recommends -y build-essential gcc-6 g++-6 wget ca-certificates libboost-dev  \
 && update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 100  \
 && update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-6 100  \
